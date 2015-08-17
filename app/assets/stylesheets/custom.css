@@ -1,0 +1,50 @@
+/* Add here all your css styles (customizations) */
+/*for index, login, signup*/
+.organ-donation-form{
+  /*border: solid 1px #ccc;*/
+  background-color: #fff;
+  font-size: 16px;
+  padding: 20px;
+}
+.text-align-left{
+  text-align: left;
+}
+.founder-talk{
+  background-color: #000;
+  padding: 40px 0px;
+  text-align: center;
+}
+textarea{
+  resize: none;
+}
+.lastword-form{
+  border: solid 1px #ccc;
+  background-color: #F7F7F7;
+  font-size: 16px;
+  padding: 20px;
+}
+.interactive-slider-v2:after {
+  background: rgba(0,0,0,0);
+}
+.index-slider h2,
+.index-slider h3{
+  color: #fff;
+}
+.font13{font-size: 13px;}
+.font16{font-size: 16px;}
+.font18{font-size: 18px;}
+.sub-active{
+  padding: 50px 0px;
+  background-color: #666;
+  background: rgba(0,0,0,0.1);
+}
+.subtitle h2{
+  color: #000;
+}
+h2 .font-color{
+  color: #5fb611;
+}
+.navbar-brand{
+  padding: 40px;
+  font-size: 70px;
+}
