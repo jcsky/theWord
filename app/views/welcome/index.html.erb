@@ -11,7 +11,16 @@
                 <ul class="loginbar pull-right">
                     <li><a href="page_faq.html">關於我們</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_login.html">會員登入。修改我的意願</a></li>
+                    <li>
+                        <% if user_signed_in? %>
+                          Logged in as <strong><%= current_user.email %></strong>.
+                          <%= link_to '編輯profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                          <%= link_to "登出", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                        <% else %>
+                          <%= link_to "註冊", new_user_registration_path, :class => 'navbar-link'  %> |
+                          <%= link_to "登入", new_user_session_path, :class => 'navbar-link'  %>
+                        <% end %>
+                    </li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -36,12 +45,12 @@
                     </li>
                     <li class="page-scroll">
                         <a href="#organ-donation">
-                            30秒器捐
+                            器捐意願
                         </a>
                     </li>
                     <li class="page-scroll">
                         <a href="#organ-donation2">
-                            我已領有器捐卡
+                            安寧意願
                         </a>
                     </li>
                     <li class="page-scroll">
