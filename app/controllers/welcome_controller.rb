@@ -3,4 +3,16 @@ class WelcomeController < ApplicationController
 
   end
 
+  def organ
+
+  end
+
+  def hospice
+
+  end
+
+  def funeral
+
+  end
+
 end

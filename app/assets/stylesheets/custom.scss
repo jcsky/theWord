@@ -11,6 +11,17 @@
   background-color: #555;
     text-align: center;
 }
+.fill-all-form{
+  margin: 30px;
+  // padding: 0px 80px;
+}
+@media (max-width: 550px){
+  .fill-all-form{
+    padding: 0px;
+  }
+
+}
+
 .text-align-left{
   text-align: left;
 }
