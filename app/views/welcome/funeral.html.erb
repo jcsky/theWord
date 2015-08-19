@@ -1,4 +1,5 @@
 <%= render :partial => "header", :locals => { } %>
+<%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
         <div class="row">
           <h2 style="text-align:center;">喪葬意願</h2>
           <textarea rows="4" style="width:80%;margin:0px auto;" name="message" id="message" class="form-control" placeholder="我的喪葬事宜"></textarea>

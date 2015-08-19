@@ -1,20 +1,7 @@
 <div class="wrapper">
   <%= render :partial => "header", :locals => { } %>
-  <!-- Interactive Slider v2 -->
-  <div id="" class="interactive-slider-v2 index-slider">
-      <div class="row">
-          <h1>最後一天別讓家人煩腦</h1>
-          <div class="col-sm-8 sub-active col-sm-push-2">
-              <div class="subtitle"><h2 class="subtitle">留下你的器捐意願、安寧意願、喪葬意願</h2></div>
-              <a href="#theword" class="btn-u"><h3>開始填寫</h3></a>
-          </div>
-      </div>
-  </div>
-  <div class="input-group col-xs-12 searchbar">
-      <!-- <div class="col-md-6 col-sm-10"> -->
-        <input type="text" class="form-control" style="float:none; width: 60%;padding:20px 10px;" placeholder="輸入Email查詢親友的再見手札"><a class="btn-u" type="button"><i class="fa fa-search" style="padding:8px;"></i></a>
-  </div>
-  <!-- End Interactive Slider v2 -->
+  <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
+
   <div id="theword" class="row fill-all-form">
     <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
       <form action="" method="POST" class="" role="form">
