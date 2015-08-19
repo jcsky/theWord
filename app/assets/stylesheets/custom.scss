@@ -6,6 +6,11 @@
   font-size: 16px;
   padding: 20px;
 }
+.searchbar{
+  padding: 40px;
+  background-color: #555;
+    text-align: center;
+}
 .text-align-left{
   text-align: left;
 }
@@ -22,6 +27,10 @@ textarea{
   background-color: #F7F7F7;
   font-size: 16px;
   padding: 20px;
+}
+.interactive-slider-v2{
+  // max-height: 300px;
+  padding:50px 0px;
 }
 .interactive-slider-v2:after {
   background: rgba(0,0,0,0);
