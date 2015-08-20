@@ -17,4 +17,6 @@
 /tmp
 
 /config/secrets.yml
-/confit/database.yml
+/config/database.yml
+/config/oauth.yml
+/config/email.yml

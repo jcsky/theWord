@@ -23,17 +23,22 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'devise'
 gem 'rails-i18n'
+
+gem 'devise'
 # gem 'devise-i18n'
 # gem 'devise-i18n-views'
-gem 'omniauth-facebook'
+gem "omniauth"
+gem "omniauth-facebook"
+gem "omniauth-twitter"
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails'
 gem 'pg'
+gem 'domp'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -46,11 +51,10 @@ gem 'capistrano-passenger', :group => :development
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem "letter_opener"
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
