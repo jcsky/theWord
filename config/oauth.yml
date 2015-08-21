@@ -1,0 +1,15 @@
+development:
+  fb_id: 1576127389342352
+  fb_secret: c2eb8b05f012238b7693fa015c7ada9f
+  tw_id: i2ZXiZr6qudgZMLFaVRjHv3qy
+  tw_secret: ngZdUPUUoCQU72BXa4AcFEV335AxFKzbhfCR1Gs971uExFmdvd
+
+test:
+  fb_id: 1576127389342352
+  fb_secret: c2eb8b05f012238b7693fa015c7ada9f
+  tw_id: i2ZXiZr6qudgZMLFaVRjHv3qy
+  tw_secret: ngZdUPUUoCQU72BXa4AcFEV335AxFKzbhfCR1Gs971uExFmdvd
+
+production:
+ app_id:
+ secret:
