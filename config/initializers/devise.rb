@@ -6,13 +6,13 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  config.secret_key = 'ebd81b5597ac45b7f2383def9332b22e28817774c6a982c116fe67b41502545a98947c4480373604489b5a6677ebabc41f22c43a2c4fee532d0151ba1dc5c2c2'
+  # config.secret_key = 'df2897705eedfd87574a5f613e2e7a745c8948b6cd78111a64c9f20bac2eed9b85be6d57ac416b2368cd99dc2cca435b2194a978f0a57a6fdc705a02337a8a77'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'theword.core@gmail.com'
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -99,7 +99,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'a6e9cf8a2976e395ba8438fe8e32439cdf2f9d48536526c5809d075d88a7fba3725462a84169cf1ba276e4671e47b9a31ac047a03a828e592cf871fa1e1dd5cf'
+  # config.pepper = 'f859186e6cb8b123157a1881e4057fd6140c7bacb410452eb53713ee41ded402538a150772dc54f05fd516d427b32b50f9d8d4b4da1c2e997cf3e6b826e6327b'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -211,7 +211,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = true
+  # config.scoped_views = false
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
@@ -239,7 +239,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  fb_config = YAML.load(File.read("#{Rails.root}/config/oauth.yml"))[Rails.env]
 
+  config.omniauth :facebook, fb_config['fb_id'] , fb_config['fb_secret'], scope: 'email', info_fields: 'email, name'
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
