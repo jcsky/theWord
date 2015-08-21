@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821034553) do
+ActiveRecord::Schema.define(version: 20150821064319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "thewords", force: :cascade do |t|
+    t.integer "user_id"
+    t.json    "organ"
+    t.json    "hospice"
+    t.json    "funeral"
+    t.string  "some_message"
+  end
+  #organ {"donation"=>"all,part,no",Heart"=>"true","Lung"=>"true","Liver"=>"true","Pancreas"=>"true","Kidney"=>"true","Small intestine"=>"true","Cornea"=>"true","Skin"=>"true","Skeleton"=>"true","Heart Valve"=>"true","Artery"=>"true","message"=>"string"}
+  #hospice {"1"=>"true","2"=>"true","3"=>"true","message"=>"string"}
+  #funeral {"message"=>"string"}
+  #some_message {"message"=>"string"}
+  add_index "thewords", ["user_id"], name: "index_thewords_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "fullname"
