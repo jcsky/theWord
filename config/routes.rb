@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+
+  resources :users
+
   get 'hospice' => 'welcome#hospice'
   get 'organ-donation' => 'welcome#organ'
   get 'funeral' => 'welcome#funeral'
