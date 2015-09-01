@@ -18,10 +18,23 @@ ActiveRecord::Schema.define(version: 20150826150058) do
 
   create_table "byenotes", force: :cascade do |t|
     t.integer "user_id"
-    t.json    "organ"
-    t.json    "hospice"
-    t.json    "funeral"
-    t.string  "some_message"
+    t.text    "funeral"
+    t.text    "some_message"
+    t.string  "donate_select"
+    t.boolean "donate_heart"
+    t.boolean "donate_lung"
+    t.boolean "donate_liver"
+    t.boolean "donate_pancreas"
+    t.boolean "donate_kidney"
+    t.boolean "donate_smll_intestine"
+    t.boolean "donate_cornea"
+    t.boolean "donate_skin"
+    t.boolean "donate_skeleton"
+    t.boolean "donate_heart_valve"
+    t.boolean "donate_artery"
+    t.boolean "hospice_palliative"
+    t.boolean "hospice_no_cpr"
+    t.boolean "hospice_life_sustaining"
   end
 
   add_index "byenotes", ["user_id"], name: "index_byenotes_on_user_id", using: :btree

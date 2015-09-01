@@ -4,7 +4,7 @@
 
   <div id="theword" class="row fill-all-form">
     <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
-      <form action="" method="POST" class="" role="form">
+      <%= form_for(@byenote) do |f| %>
         <%= render :partial => "welcome/organ_form", :locals => { } %>
         <%= render :partial => "welcome/hospice_form", :locals => { } %>
         <%= render :partial => "welcome/funeral_form", :locals => { } %>
@@ -18,7 +18,7 @@
               <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
           </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>
