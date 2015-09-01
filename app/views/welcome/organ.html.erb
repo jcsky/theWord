@@ -2,19 +2,75 @@
 <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
 
 <div id="theword" class="row fill-all-form">
-<div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
-  <form action="" method="POST" class="" role="form">
-    <%= render :partial => "organ_form", :locals => { } %>
+    <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
+      <form action="" method="POST" class="" role="form">
+        <%= render :partial => "organ_form", :locals => { } %>
 
-    <div class="margin-bottom-20"></div>
-    <div class="row">
-      <div class="col-xs-12">
-          <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
-      </div>
+        <div class="margin-bottom-20"></div>
+        <div class="row">
+          <div class="col-xs-12">
+              <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
+          </div>
+        </div>
+      </form>
     </div>
-  </form>
 </div>
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- General Questions -->
+        <div class="headline"><h2>General Questions</h2></div>
+<%= render :partial => "faq", :locals => {:title => "什麼是器官捐贈？", :content => "器官捐贈是當人結束生命(腦死)時，將可用的器官捐贈出來，移植給有需要的病人以延續他人生命，遺愛人間偉大崇高的行為。器官捐贈者多半是意外腦傷的病患，在家屬同意下，經腦死判定醫師判定「腦死」才能進行器官摘取手術。"} %>
+<%= render :partial => "faq", :locals => {:title => "什麼是「腦死」？", :content => "臨床上的腦死是指人體生命中樞（腦幹）因疾病或外傷因素導致壞死、衰竭，使得呼吸功能停止、血壓降低、心跳停止；雖說可藉由呼吸器和藥物暫時維持人體呼吸、血壓及心跳等生理功能，但仍難以維持超過兩週，一旦除去呼吸器，腦死病人無法自行呼吸，心跳亦隨之停止。即使是最好的醫療照顧也無法使病患腦幹功能恢復。
+所以目前醫學上或法律上，腦死已經被認定為真正的死亡。由於判定腦死是攸關生死的大事，因此我國法律規定有明確的腦死判定步驟，及判定醫師的資格限制，以確保能正確判定。
+腦死判定依法有明確嚴謹的程序：進行腦死判定之前，至少觀察12小時以上，確定病人陷入深度昏迷，不能自行呼吸，需依靠人工呼吸器維持呼吸，而且導致昏迷的原因已確定，病人是遭受無法復原的腦部結構損傷。
+腦死判定的進行是由兩名具腦死判定資格醫師及病人主治醫師，在具人工呼吸器及測定血液氣體分析等腦死判定所需設備的醫院內，依嚴謹的腦死判定步驟進行兩次測試；第一次測試腦幹功能通過後，間隔四小時後，再依第一次測試的規定程序再進行一次。如果經兩次腦幹功能測試，病人完全符合無腦幹反射、不能自行呼吸的條件，即宣佈病人腦死。"} %>
+<%= render :partial => "faq", :locals => {:title => "器官捐贈的範圍", :content => "組織捐贈：人體可供移植的的組織包括骨骼、眼角膜、皮膚、小腸、心瓣膜、血管、氣管、軟骨組織、肌腱、骨髓等。
+器官捐贈：目前國內移植成功的器官有心臟、肺臟、腎臟、肝臟、胰臟等器官。移植手術可幫助器官衰竭的病患因他人的器官捐贈而獲得新生命。"} %>
+<%= render :partial => "faq", :locals => {:title => "為什麼要器官捐贈？", :content => "讓親屬未來有需要時，可優先獲得器官捐贈
+根據2014年10月施行之「人體器官移植分配及管理辦法」，未來捐贈器官不但能幫助其他家庭，同時也能庇佑自己的家人，未來萬一配偶或三親等內血親等候器官移植時將有優先權。死後留給家人的不一定是財產，而是健康的庇蔭！
+
+「器官捐贈，薪傳生命」
+捐贈器官給急需器官移植的患者，讓他們能夠延續生命，改善未來生活品質，這是一種大愛的情操，更是尊重生命的行為表現。一個器官捐贈者，可以幫助
+數個家庭重生，也讓捐贈者的身體以另一種方式繼續存在人間。
+
+醫療與喪葬費用補助，減輕家屬負擔
+為表達對捐贈者之感念，摘取器官之後，醫院會提供喪葬與醫療補助費給捐贈者家屬。各家醫院給付標準不一，但是相差不多。最高可獲得超過新台幣35萬元補助。"} %>
+<%= render :partial => "faq", :locals => {:title => "器官捐贈者的擔心事項", :content => "如果表達了器官捐贈的意願，被送到醫院時，是否會影響到照顧的醫療品質？
+器官捐贈是等到所有救命措施都失敗，醫療人員與病患家屬開始討論死亡時，才會被提出的問題。所以表達了器官捐贈的意願，並不會影響到應有的醫療照顧品質。"} %>
+<%= render :partial => "faq", :locals => {:title => "進行腦死判定的過程，病人會不會痛（不舒服）？", :content => "腦死病人是不會有感覺的，所以在進行捐贈手術時，病人是不會痛、不會不舒服的。"} %>
+<%= render :partial => "faq", :locals => {:title => "宗教對器官捐贈的看法", :content => "在佛教、天主教、道教、回教、一貫道、基督教的教義，都同意器官捐贈器官讓生命得以延續，並視之為一種救人積善的行為。可以在世時多和教友、同道討論此問題，分享彼此感想。"} %>
+<%= render :partial => "faq", :locals => {:title => "器官捐贈後，遺體外觀是否會受影響，喪葬事宜能否如常進行？", :content => "器官摘取後，醫師會放入支撐物並仔細縫合傷口，維持完整的外觀，外表看來不會有異常的情形。因此，喪葬事宜必定能如常進行。"} %>
+<%= render :partial => "faq", :locals => {:title => "捐贈器官後，醫院會協助處理後事嗎？", :content => "在完成器官摘除手術後，捐贈的遺體由院方交給家屬，依個別意願辦理喪葬儀式，醫院在能力範圍內會盡量幫忙協助處理後事。"} %>
+<%= render :partial => "faq", :locals => {:title => "器官捐贈者的條件", :content => "器官捐贈沒有絕對的年齡限制，視捐贈器官及組織之可用性而定。醫師會依據捐贈人的臨床狀況，決定什麼器官可供移植。年齡過高以及有傳染病者的器官無法捐贈移植，即使如此，捐贈屍體也有益於醫學的研究。一般而言器官捐贈需符合以下條件：
+1.符合腦死條件而器官功能正常
+2.無惡性腫瘤病史（腦瘤除外）
+3.無愛滋病病史
+4.無明顯敗血症
+5.無長時間（15分鐘以上）低血壓、休克或無心跳"} %>
+<%= render :partial => "faq", :locals => {:title => "植物人可以捐贈器官嗎？", :content => "不可以。植物人是因腦部本身的疾病或其他系統併發的腦病變，導致大腦一般性功能喪失。此類病人雖沒有思考、記憶、認知、行為或語言能力，但腦幹功能正常，可維持自發性呼吸、心跳，故無法捐贈器官。
+但植物人於臨終前若經醫師評估其組織狀況良好，是可以捐贈組織（骨骼、皮膚、眼角膜、肌腱、心瓣膜）的。"} %>
+<%= render :partial => "faq", :locals => {:title => "自殺的人可以做器官捐贈嗎？", :content => "只要符合器官捐贈者條件及當事人家屬同意者，均可做器官捐贈。"} %>
+<%= render :partial => "faq", :locals => {:title => "如何在生前表達自己有器官捐贈的意願？", :content => "?除了再見手札之外，你可以簽署器官捐贈同意卡，取得卡片後在背面簽上自己的姓名，並隨身攜帶此卡片；
+或可申請在健保IC卡上加註器官捐贈意願；由相關單位將資料轉送至中央健保局加註；
+平常應多與親友討論、溝通表達自己的意願和對器官捐贈的看法。"} %>
+<%= render :partial => "faq", :locals => {:title => "是否可以改變已簽署器官捐贈卡的決定？", :content => "器官捐贈是個人的意願，個人有絕對的權利來改變心意，萬一您改變決定，只要將捐贈同意卡撕毀即可。或以書面函送中央健保局取消健保IC卡加註意願。"} %>
+<%= render :partial => "faq", :locals => {:title => "如果我簽了器官捐贈同意卡，我的意願會實現嗎？", :content => "一般來說，僅有在腦死的狀況下，才得施行器官捐贈。此外，除了捐贈者本身的意願外，也需要取得捐贈者家屬的同意，才能作器官捐贈完成遺愛人間之大愛！家屬先後優先順序分別為配偶、直系卑親屬（子女）、父母、兄弟姊妹、祖父母、曾祖父母或五親等旁系血親。"} %>
+<%= render :partial => "faq", :locals => {:title => "如果不想捐出所有器官，可以只捐一個器官嗎？", :content => "當然可以指定自己想捐出的器官種類，醫院會尊重每一個人的意願。"} %>
+<%= render :partial => "faq", :locals => {:title => "是否可以指定捐贈給某位特定人士？", :content => "器官捐贈者如果在捐贈當時有家人在等候器官，當下可以指定捐贈給五親等內家屬及配偶，但限於當時當次的捐贈，例如姪子車禍死亡，家人可決定捐腎臟給洗腎的叔叔。"} %>
+<%= render :partial => "faq", :locals => {:title => "生前預立遺囑或已簽器捐卡，但家屬不同意捐贈，是否仍可捐贈？", :content => "即使是預立遺囑或已簽器捐卡，表明捐贈意願，但一旦有家屬不同意捐贈，醫院將尊重家屬意願。"} %>
+<%= render :partial => "faq", :locals => {:title => "是否可以指定捐給特定的醫院？", :content => "如果想指定捐給特定醫院，醫院將會尊重病人及家屬意願。"} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+<%= render :partial => "faq", :locals => {:title => "", :content => ""} %>
+    </div>
 </div>
+
 
 
 <div id="organ-donation" class="bg-grey content-lg">

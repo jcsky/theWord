@@ -1,50 +1,51 @@
-    <!--=== Header ===-->
-    <div class="header header-sticky">
+
+<div class="header header-sticky">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" style="padding:40px;font-size:30px;color:#72c02c;" href="index.html">theWord - 再見手札</a>
+        <!-- End Logo -->
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <ul class="loginbar pull-right">
+                <li>
+                    <% if user_signed_in? %>
+                      <strong><%= current_user.fullname || current_user.email %></strong>
+                      <%= link_to "登出", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                    <% else %>
+                      <%= link_to "註冊", new_user_registration_path, :class => 'navbar-link'  %> |
+                      <%= link_to "登入", new_user_session_path, :class => 'navbar-link'  %> |
+                      <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) %>
+                    <% end %>
+                </li>
+            </ul>
+        </div>
+        <!-- End Topbar -->
+
+        <!-- Toggle get grouped for better mobile display -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">theWord</span>
+            <span class="fa fa-bars"></span>
+        </button>
+        <!-- End Toggle -->
+    </div><!--/end container-->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
         <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" style="padding:40px;font-size:30px;color:#72c02c;" href="index.html">theWord - 再見手札</a>
-            <!-- End Logo -->
-
-            <!-- Topbar -->
-            <div class="topbar">
-                <ul class="loginbar pull-right">
-                    <li><a href="page_faq.html">關於我們</a></li>
-                    <li class="topbar-devider"></li>
-                    <li>
-                        <% if user_signed_in? %>
-                          Logged in as <strong><%= current_user.email %></strong>.
-                          <%= link_to "登出", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-                        <% else %>
-                          <%= link_to "註冊", new_user_registration_path, :class => 'navbar-link'  %> |
-                          <%= link_to "登入", new_user_session_path, :class => 'navbar-link'  %> |
-                          <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) %>
-                        <% end %>
-                    </li>
-                </ul>
-            </div>
-            <!-- End Topbar -->
-
-            <!-- Toggle get grouped for better mobile display -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="sr-only">theWord</span>
-                <span class="fa fa-bars"></span>
-            </button>
-            <!-- End Toggle -->
-        </div><!--/end container-->
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <!-- Home -->
+            <ul class="nav navbar-nav">
+                <% if user_signed_in? %>
+                    <li class="page-scroll"><%= link_to '再見手札', theword_path %></li>
+                    <li class="page-scroll"><%= link_to '個人資料', profile_path %></li>
+                <% else %>
                     <li class="page-scroll"><%= link_to '服務說明', root_path %></li>
                     <li class="page-scroll"><%= link_to '器捐意願', organ_donation_path %></li>
                     <li class="page-scroll"><%= link_to '安寧意願', hospice_path %></li>
                     <li class="page-scroll"><%= link_to '喪葬意願', funeral_path %></li>
                     <li class="page-scroll"><a href="#search">查詢親友意願</a></li>
                     <li class="page-scroll"><a href="#contact">聯絡我們</a></li>
-                </ul>
-            </div><!--/end container-->
-        </div><!--/navbar-collapse-->
-    </div>
-    <!--=== End Header ===-->
+                <% end %>
+            </ul>
+        </div><!--/end container-->
+    </div><!--/navbar-collapse-->
+</div>

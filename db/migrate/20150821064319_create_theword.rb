@@ -1,12 +1,12 @@
 class CreateTheword < ActiveRecord::Migration
   def change
-    create_table :thewords do |t|
+    create_table :byenotes do |t|
       t.integer 'user_id'
       t.json 'organ'
       t.json 'hospice'
       t.json 'funeral'
       t.string 'some_message'
     end
-    add_index :thewords, :user_id
+    add_index :byenotes, :user_id
   end
 end

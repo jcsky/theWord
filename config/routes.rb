@@ -13,10 +13,14 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users
+  resources :byenotes
 
   get 'hospice' => 'welcome#hospice'
   get 'organ-donation' => 'welcome#organ'
   get 'funeral' => 'welcome#funeral'
+  get 'profile' => 'users#show'
+  get 'theword' => 'users#theword'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -24,7 +28,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    # resources :user
 
   # Example resource route with options:
   #   resources :products do

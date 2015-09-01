@@ -1,14 +1,13 @@
+
 <div class="wrapper">
-  <%= render :partial => "header", :locals => { } %>
-  <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
+  <%= render :partial => "welcome/header", :locals => { } %>
 
   <div id="theword" class="row fill-all-form">
     <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
-      <!-- <form action="" method="POST" class="" role="form"> -->
-      <%= form_for(@byenote) do |f| %>
-        <%= render :partial => "organ_form", :locals => {:f => f} %>
-        <%= render :partial => "hospice_form", :locals => {:f => f} %>
-        <%= render :partial => "funeral_form", :locals => {:f => f} %>
+      <form action="" method="POST" class="" role="form">
+        <%= render :partial => "welcome/organ_form", :locals => { } %>
+        <%= render :partial => "welcome/hospice_form", :locals => { } %>
+        <%= render :partial => "welcome/funeral_form", :locals => { } %>
         <div class="row">
           <div class="heading heading-v4"><h2 style="text-align:center;">4.給親友的話</h2></div>
           <textarea rows="4" style="width:80%;margin:0px auto;" name="message" id="message" class="form-control" placeholder="與親朋好友們道謝、道歉、道愛、道別"></textarea>
@@ -19,12 +18,9 @@
               <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
           </div>
         </div>
-      <!-- </form> -->
-      <% end %>
-
+      </form>
     </div>
   </div>
-  <%= render :partial => "contactus", :locals => { } %>
 </div>
 
 <script type="text/javascript">
