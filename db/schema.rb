@@ -20,21 +20,21 @@ ActiveRecord::Schema.define(version: 20150826150058) do
     t.integer "user_id"
     t.text    "funeral"
     t.text    "some_message"
-    t.string  "donate_select"
-    t.boolean "donate_heart"
-    t.boolean "donate_lung"
-    t.boolean "donate_liver"
-    t.boolean "donate_pancreas"
-    t.boolean "donate_kidney"
-    t.boolean "donate_smll_intestine"
-    t.boolean "donate_cornea"
-    t.boolean "donate_skin"
-    t.boolean "donate_skeleton"
-    t.boolean "donate_heart_valve"
-    t.boolean "donate_artery"
-    t.boolean "hospice_palliative"
-    t.boolean "hospice_no_cpr"
-    t.boolean "hospice_life_sustaining"
+    t.string  "donate_select",           default: "no"
+    t.boolean "donate_heart",            default: false
+    t.boolean "donate_lung",             default: false
+    t.boolean "donate_liver",            default: false
+    t.boolean "donate_pancreas",         default: false
+    t.boolean "donate_kidney",           default: false
+    t.boolean "donate_smll_intestine",   default: false
+    t.boolean "donate_cornea",           default: false
+    t.boolean "donate_skin",             default: false
+    t.boolean "donate_skeleton",         default: false
+    t.boolean "donate_heart_valve",      default: false
+    t.boolean "donate_artery",           default: false
+    t.boolean "hospice_palliative",      default: false
+    t.boolean "hospice_no_cpr",          default: false
+    t.boolean "hospice_life_sustaining", default: false
   end
 
   add_index "byenotes", ["user_id"], name: "index_byenotes_on_user_id", using: :btree
