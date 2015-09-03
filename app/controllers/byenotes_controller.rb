@@ -1,9 +1,12 @@
 class ByenotesController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   def create
-    @user = current_user
-    @user.build_byenote = params[:byenote]
-    byebug
+    if user_signed_in? == false
+      session[:byenote_params] = byenote_params
+      redirect_to new_user_session_path
+    else
+      redirect_to update_byenote_path
+    end
   end
 
   def byenote_params

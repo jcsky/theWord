@@ -3,9 +3,9 @@
 
 <div id="theword" class="row fill-all-form">
   <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
-    <form action="" method="POST" class="" role="form">
-      <%= render :partial => "funeral_form", :locals => { } %>
-    </form>
+    <%= form_for(@byenote) do |f| %>
+      <%= render :partial => "funeral_form", :locals => {:f => f} %>
+    <% end %>
   </div>
 </div>
 <%= render :partial => "contactus", :locals => { } %>
