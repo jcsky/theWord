@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
 
   def hospice
     @byenote = Byenote.new
-    @btitle = "最後一天別讓家人煩腦"
+    @btitle = "如果我沒醒過來<br/>不要串通醫師凌遲我!"
     @stitle = "留下你的安寧意願"
     @search_text = "輸入Email查詢親友的安寧意願"
   end
