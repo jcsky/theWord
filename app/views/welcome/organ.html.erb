@@ -45,6 +45,8 @@
                         <p>捐贈者家屬最高可獲得超過35萬元 喪葬和醫療費⽤用補助</p>
                     </div>
                 </div>
+                <a href="#theword" class="btn-u btn-brd btn-brd-hover btn-u-dark">寫下我的器捐意願</a>
+                <!-- <a href="#" class="btn-u">View Our Work</a> -->
             </div>
 
             <div class="col-md-6 organ-donation-form form-page">
@@ -83,6 +85,7 @@
                         <p>台灣約7萬的洗腎⼈口,年花健保371億,慢性腎衰竭為⾨診醫療費用第一名</p>
                     </div>
                 </div>
+                <a href="#theword" class="btn-u btn-brd btn-brd-hover btn-u-dark">寫下我的器捐意願</a>
             </div>
             <div class="col-md-6 organ-donation-form form-page">
                 <%= youtube("hztCYj-JrpI").html_safe %>
@@ -123,7 +126,7 @@
 
 <div class="founder-talk">
     <div class="parallax-quote-in">
-        <p>我願意器捐、我分享意願， <span class="color-green">也許最後我才是受贈者</span></p>
+        <p>如果你希望有一天，病床上的自己可以獲得別人的器官而重生<br><span class="color-green">那就把你的器捐意願分享出去</span></p>
         <small>- 再見手札創辦人 Sky -</small>
     </div>
 </div>
@@ -135,7 +138,7 @@
         <div class="margin-bottom-20"></div>
         <div class="row">
           <div class="col-xs-12">
-              <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
+            <%= f.submit "儲存我的器捐意願", :class => "btn btn-u" %>
           </div>
         </div>
       <% end %>
