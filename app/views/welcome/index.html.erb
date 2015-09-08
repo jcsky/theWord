@@ -3,7 +3,7 @@
   <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
 
   <div id="theword" class="row fill-all-form">
-    <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
+    <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
       <%= form_for(@byenote) do |f| %>
         <%= render :partial => "organ_form", :locals => {:f => f} %>
         <%= render :partial => "hospice_form", :locals => {:f => f} %>
