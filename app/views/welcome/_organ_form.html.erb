@@ -13,19 +13,24 @@
         <label class="radio content-boxes-v1 radio-v1"><%= f.radio_button :donate_select, "no" %><i class="rounded-x"></i>不要捐贈器官</label>
     </div>
 
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart, {}, true, false %>心臟</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_lung, {}, true, false %>肺臟</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_liver, {}, true, false %>肝臟</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_pancreas, {}, true, false %>胰臟</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_kidney, {}, true, false %>腎臟</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_smll_intestine, {}, true, false %>小腸</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_cornea, {}, true, false %>眼角膜</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skin, {}, true, false %>皮膚</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skeleton, {}, true, false %>骨骼</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart_valve, {}, true, false %>心瓣膜</label></div>
-    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_artery, {}, true, false %>血管</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart, {:id => "organ_select_checkbox"}, 1, 0 %>心臟</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_lung, {}, 1, 0 %>肺臟</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_liver, {}, 1, 0 %>肝臟</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_pancreas, {}, 1, 0 %>胰臟</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_kidney, {}, 1, 0 %>腎臟</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_smll_intestine, {}, 1, 0 %>小腸</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_cornea, {}, 1, 0 %>眼角膜</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skin, {}, 1, 0 %>皮膚</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skeleton, {}, 1, 0 %>骨骼</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart_valve, {}, 1, 0 %>心瓣膜</label></div>
+    <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_artery, {}, 1, 0 %>血管</label></div>
   </div>
 
+  <script type="text/javascript">
+    $('#byenote_donate_select_all').select(
+      $('#organ_select_checkbox').checked = false;
+    );
+  </script>
   <!-- <div class="col-md-8 margin-bottom-20">
       <input type="text" name="organ_message" class="form-control" placeholder="寫下簽署的原因讓親友知道">
   </div> -->

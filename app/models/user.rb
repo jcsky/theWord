@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
-  after_create :create_byenote
-
   has_one :byenote, :dependent => :destroy
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -23,12 +21,11 @@ class User < ActiveRecord::Base
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
       end
+      if session[:byenote_params]
+        user.byenote = Byenote.new(session[:byenote_params])
+        session[:byenote_params] = nil
+      end
     end
   end
 
-  def create_byenote
-    if session[:byenote_params]
-      self.byenote.create(session[:byenote_params])
-    end
-  end
 end
