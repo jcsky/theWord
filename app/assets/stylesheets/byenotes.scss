@@ -1,3 +1,11 @@
 // Place all the styles related to the byenotes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.message_textarea{
+  width: 100%;
+  margin: 0px auto;
+  border: solid 1px #bbb;
+}
+.form-page{
+  padding: 0px 15%;
+}

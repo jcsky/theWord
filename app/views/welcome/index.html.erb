@@ -10,8 +10,7 @@
         <%= render :partial => "funeral_form", :locals => {:f => f} %>
         <div class="row">
           <div class="heading heading-v4"><h2 style="text-align:center;">給親友的話</h2></div>
-          <!-- <textarea rows="4" style="width:80%;margin:0px auto;" name="message" id="message" class="form-control" placeholder="與親朋好友們道謝、道歉、道愛、道別"></textarea> -->
-          <%= f.text_area :some_message, rows: 4, :placeholder => "與親朋好友們道謝、道歉、道愛、道別" %>
+          <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "與親朋好友們道謝、道歉、道愛、道別" %>
         </div>
         <div class="margin-bottom-20"></div>
         <div class="row">
