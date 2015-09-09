@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   devise :omniauthable, :omniauth_providers => [:facebook]
-
-  has_one :byenote, :dependent => :destroy
+  before_create :set_page_url
+  has_one :byenote, :dependent => :delete
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
@@ -26,6 +26,10 @@ class User < ActiveRecord::Base
         session[:byenote_params] = nil
       end
     end
+  end
+
+  def set_page_url
+    self.page_url = SecureRandom.urlsafe_base64()
   end
 
 end

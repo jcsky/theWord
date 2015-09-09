@@ -1,23 +1,42 @@
 class ByenotesController < ApplicationController
   # before_action :authenticate_user!
   def create
-    if user_signed_in? == false
+    @user = current_user
+    if @user
+      if current_user.byenote
+        redirect_to update_byenote_path
+      else
+        @byenote = Byenote.new(byenote_params)
+        @byenote.user_id = @user.id
+        @byenote.save
+      end
+      redirect_to theword_path
+    else
       session[:byenote_params] = byenote_params
       redirect_to new_user_session_path
-    else
-      redirect_to update_byenote_path
     end
   end
 
   def update
-    # current_user.byenote = Byenote.new(byenote_params)
-    # byebug
     if current_user.byenote.update(byenote_params)
       redirect_to theword_path
     else
       redirect_to :back
     end
   end
+
+  def read
+    @user = User.find_by_page_url(params[:theword])
+    if @user
+      @byenote = @user.byenote
+      render :read
+    else
+      redirect_to root_path
+    end
+
+  end
+
+  private
 
   def byenote_params
     params.require(:byenote).permit(:user_id, :funeral, :some_message, :donate_select, :donate_heart, :donate_lung, :donate_liver, :donate_pancreas, :donate_kidney, :donate_smll_intestine, :donate_cornea, :donate_skin, :donate_skeleton, :donate_heart_valve, :donate_artery, :hospice_palliative, :hospice_no_cpr, :hospice_life_sustaining)

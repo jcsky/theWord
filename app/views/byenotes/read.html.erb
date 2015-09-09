@@ -1,0 +1,22 @@
+<%= render :partial => "/welcome/header", :locals => { } %>
+
+<div id="theword" class="row fill-all-form">
+  <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
+    <%= form_for(@byenote) do |f| %>
+      <%= render :partial => "welcome/organ_form", :locals => {:f => f } %>
+      <%= render :partial => "welcome/hospice_form", :locals => {:f => f } %>
+      <%= render :partial => "welcome/funeral_form", :locals => {:f => f } %>
+      <div class="row">
+        <div class="heading heading-v4"><h2 style="text-align:center;">給親友的話</h2></div>
+          <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "與親朋好友們道謝、道歉、道愛、道別" %>
+      </div>
+      <div class="margin-bottom-20"></div>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        lockAllBox();
+    });
+</script>

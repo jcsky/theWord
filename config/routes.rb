@@ -18,8 +18,11 @@ Rails.application.routes.draw do
   get 'hospice' => 'welcome#hospice'
   get 'organ-donation' => 'welcome#organ'
   get 'funeral' => 'welcome#funeral'
+
   get 'profile' => 'users#show'
   get 'theword' => 'users#theword'
+
+  get 'read' => 'byenotes#read'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
