@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
   before_create :set_page_url
-  after_create :byenote_session
 
   has_one :byenote, :dependent => :delete
   def self.from_omniauth(auth)
@@ -28,21 +27,11 @@ class User < ActiveRecord::Base
         session[:byenote_params] = nil
       end
     end
-    logger.info "-------------------------------"
-    logger.info "new_with_session run"
-    logger.info session[:byenote_params]
-    logger.info "-------------------------------"
   end
 
   def set_page_url
-    # self.page_url = SecureRandom.urlsafe_base64()
+    self.page_url = SecureRandom.urlsafe_base64()
   end
 
-  def byenote_session
-      # if session[:byenote_params]
-      #   self.byenote = Byenote.new(session[:byenote_params])
-      #   session[:byenote_params] = nil
-      # end
-  end
 
 end
