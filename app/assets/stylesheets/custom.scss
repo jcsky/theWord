@@ -6,10 +6,22 @@
   font-size: 16px;
   padding: 20px;
 }
+s1{
+  // width: 70%;
+}
+s2{
+  // width: 70%;
+}
 .searchbar{
-  padding: 40px;
-  background-color: #555;
-    text-align: center;
+  padding: 5px;
+  font-size: 16px;
+  text-align: center;
+  float:left;
+  width: 60%;
+}
+.searchbutton{
+  float:left;
+  width: 10%;
 }
 .fill-all-form{
   margin: 30px;
@@ -55,8 +67,6 @@ textarea{
 .font18{font-size: 18px;}
 .sub-active{
   padding: 50px 0px;
-  background-color: #666;
-  background: rgba(0,0,0,0.1);
 }
 .subtitle h2{
   color: #000;

@@ -1,0 +1,20 @@
+<%= render :partial => "header", :locals => { } %>
+
+<div id="" class="interactive-slider-v2 index-slider">
+    <div class="row">
+        <div class="col-sm-8 sub-active col-sm-push-2 col-xs-12">
+
+              <%= form_tag "/search", :class => "" do %>
+
+                <div class="col-md-8 col-md-push-1">
+                  <%= text_field_tag :search_email,nil ,:placeholder => "輸入Email搜尋親友的再見手札" ,:class => "form-control" %>
+                </div>
+                <div class="col-md-2">
+                  <%= submit_tag "搜尋", :class => "btn btn-u form-control" %>
+                </div>
+
+              <% end %>
+
+        </div>
+    </div>
+</div>

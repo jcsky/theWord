@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   get 'profile' => 'users#show'
   get 'theword' => 'users#theword'
 
-  get 'read' => 'byenotes#read'
+  get 'read' => 'welcome#read'
+  get 'search' => 'welcome#search'
+  post 'search' => 'welcome#search_post'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
