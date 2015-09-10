@@ -1,9 +1,30 @@
 <div class="row">
-  <div class="heading heading-v4"><h2 style="text-align:center;">安寧意願</h2></div>
-  <p style="text-align:center;">(安寧緩和醫療暨維生醫療抉擇意願)</p>
-  <div class="col-sm-6 col-sm-offset-4 col-xs-12  col-xs-offset-2">
-    <label class="checkbox"><%= f.check_box :hospice_palliative, {}, 1, 0 %>接受 安寧緩和醫療</label>
-    <label class="checkbox"><%= f.check_box :hospice_no_cpr, {}, 1, 0 %>接受 不施行心肺復甦術</label>
-    <label class="checkbox"><%= f.check_box :hospice_life_sustaining, {}, 1, 0 %>接受 不施行維生醫療</label>
+  <div class="heading">
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseHospice">
+      <h3 style="text-align:center;"><legend>安寧意願</legend></h3>
+    </a>
   </div>
+    <p>全名: 安寧緩和醫療暨維生醫療抉擇意願</p>
+    <p>本人若罹患嚴重傷病,經醫師診斷認為不可治癒,且有醫學上之證據,近期內病程進行至死亡已屬不可避免時,特依安寧緩和醫療條例第四條、第五條及第七條第一項第二款所賦予之權利,作以下之抉擇:</p>
+  <div id="collapseHospice" class="panel-collapse collapse">
+      <div class="panel-body">
+        1、末期病人:指罹患嚴重傷病,經醫師診斷認為不可治癒,且有醫學上之證據,近期內病程進行至死亡已不可避免者。<br>
+        2、安寧緩和醫療:指為減輕或免除末期病人之生理、心理及靈性痛苦,施予緩解性、支持性之醫療照護,以增進其生
+        活品質。 <br>
+        3、維生醫療:指用以維持末期病人生命徵象,但無治癒效果,而只能延長其瀕死過程的醫療措施。 <br>
+        4、不施行心肺復甦術:指對臨終、瀕死或無生命徵象之病人,不施予氣管內插管、體外心臟按壓、急救藥物注射、心
+        臟電擊、心臟人工調頻、人工呼吸等標準急救程序或其他緊急救治行為。 <br>
+        5、不施行維生醫療:指末期病人不施行用以維持生命徵象及延長其瀕死過程的醫療措施。
+      </div>
+  </div>
+
+    <!-- <p style="text-align:center;">(安寧緩和醫療暨維生醫療抉擇意願)</p> -->
+    <div class="col-sm-6 col-sm-offset-4 col-xs-12  col-xs-offset-2">
+      <label title="指為減輕或免除末期病人之生理、心理及靈性痛苦,施予緩解性、支持性之醫療照護,以增進其生活品質。" class="checkbox">
+        <%= f.check_box :hospice_palliative, {}, 1, 0 %>接受 安寧緩和醫療</label>
+      <label title="指對臨終、瀕死或無生命徵象之病人，不施予氣管內插管、體外心臟按壓、急救藥物注射、心臟電擊、心臟人工調頻、人工呼吸等標準急救程序或其他緊急救治行為。" class="checkbox">
+        <%= f.check_box :hospice_no_cpr, {}, 1, 0 %>接受 不施行心肺復甦術</label>
+      <label title="指末期病人不施行用以維持生命徵象，但無治癒效果，只能及延長其瀕死過程的醫療措施。" class="checkbox">
+        <%= f.check_box :hospice_life_sustaining, {}, 1, 0 %>接受 不施行維生醫療</label>
+    </div>
 </div>

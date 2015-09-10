@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'omniauth-facebook'
 # Use ActiveModel has_secure_password

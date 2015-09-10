@@ -13,7 +13,7 @@ class ByenotesController < ApplicationController
       redirect_to theword_path
     else
       session[:byenote_params] = byenote_params
-      redirect_to new_user_session_path
+      redirect_to new_user_registration_path
     end
   end
 
@@ -22,16 +22,6 @@ class ByenotesController < ApplicationController
       redirect_to theword_path
     else
       redirect_to :back
-    end
-  end
-
-  def read
-    @user = User.find_by_page_url(params[:theword])
-    if @user
-      @byenote = @user.byenote
-      render :read
-    else
-      redirect_to root_path
     end
   end
 

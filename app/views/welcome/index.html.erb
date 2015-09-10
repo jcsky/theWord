@@ -1,15 +1,52 @@
 <div class="wrapper">
-  <%= render :partial => "header", :locals => { } %>
   <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
 
+  <div class="container content-sm">
+      <div class="text-center margin-bottom-50">
+          <h2 class="title-v2 title-center">再見手札的特色</h2>
+      </div>
+
+      <div class="row content-boxes-v4">
+          <div class="col-md-4 md-margin-bottom-40">
+              <i class="pull-left fa fa-lightbulb-o"></i>
+              <div class="content-boxes-in-v4">
+                  <h2>完整溝通</h2>
+                  <p>器捐意願、安寧意願、醫療訣擇、喪葬意願，再見手札讓您完整且方便的與家人溝通意願</p>
+              </div>
+          </div>
+          <div class="col-md-4 md-margin-bottom-40">
+              <i class="pull-left fa fa-flash"></i>
+              <div class="content-boxes-in-v4">
+                  <h2>快速分享</h2>
+                  <p>再見手札可以快速分享您的意願，並與家人溝通。當大家都願意器捐，我們才有獲得捐贈的機會</p>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <i class="pull-left fa fa-compress"></i>
+              <div class="content-boxes-in-v4">
+                  <h2>方便查詢</h2>
+                  <p>不同於健保卡註記，再見手札讓家人隨⼿就能查詢您的意願</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
   <div id="theword" class="row fill-all-form">
+    <div class="col-md-8 col-md-offset-2 col-xs-12 byenote-title">
+      <h2 class="">再見手札</h2>
+    </div>
     <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
+
       <%= form_for(@byenote) do |f| %>
         <%= render :partial => "organ_form", :locals => {:f => f} %>
+
         <%= render :partial => "hospice_form", :locals => {:f => f} %>
+
         <%= render :partial => "funeral_form", :locals => {:f => f} %>
+
         <div class="row">
-          <div class="heading heading-v4"><h2 style="text-align:center;">給親友的話</h2></div>
+          <div class="heading"><h3 style="text-align:center;"><legend>給親友的話</legend></h3></div>
           <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "與親朋好友們道謝、道歉、道愛、道別" %>
         </div>
         <div class="margin-bottom-20"></div>

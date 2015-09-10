@@ -1,5 +1,18 @@
 <div class="row">
-  <div class="heading heading-v4"><h2 style="text-align:center;">器捐意願</h2></div>
+  <div class="heading">
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOrgan">
+      <h3 style="text-align:center;"><legend>器捐意願</legend></h3>
+    </a>
+  </div>
+  <p>本人願意於生命之盡頭，捐贈可用器官，讓其他需要的病人能因此而獲得重生機會</p>
+
+
+  <div id="collapseOrgan" class="panel-collapse collapse">
+      <div class="panel-body">
+        <p>並不是每個人都有機會可以捐贈器官，一般『器官捐贈』係遭意外造成<u title="臨床所謂的「腦死」即是生命結束，視同死亡。由於近幾十年醫療科技的進步，腦死病人可以藉由呼吸器及藥物來暫時維持人體的呼吸和心跳、血壓等生理功能，但仍然難以超過兩星期。一旦除去呼吸器，腦死病人無法自行呼吸，心跳亦隨之停止。">腦死狀態</u>，醫院會徵求近親家屬兩位之書面同意書，且須經兩次腦死判定，方能完成捐贈心願。<br>完成後請分享再見手札給家人，使其了解您對器官捐贈的看法與決定。</p>
+      </div>
+  </div>
+
   <div style="padding:0px 20px;">
     <div class="col-sm-4 col-xs-12">
         <label class="radio content-boxes-v1 radio-v1"><%= f.radio_button :donate_select, "all", :onclick => "organSelectAll();" %><i class="rounded-x"></i>捐贈全部器官
@@ -12,17 +25,17 @@
         <label class="radio content-boxes-v1 radio-v1"><%= f.radio_button :donate_select, "no", :onclick => "organSelectAll();" %><i class="rounded-x"></i>不要捐贈器官</label>
     </div>
     <div id="organ_checkbox_form" style="display:none;">
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart, {}, 1, 0 %>心臟</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_lung, {}, 1, 0 %>肺臟</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_liver, {}, 1, 0 %>肝臟</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_pancreas, {}, 1, 0 %>胰臟</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_kidney, {}, 1, 0 %>腎臟</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_smll_intestine, {}, 1, 0 %>小腸</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_cornea, {}, 1, 0 %>眼角膜</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skin, {}, 1, 0 %>皮膚</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_skeleton, {}, 1, 0 %>骨骼</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_heart_valve, {}, 1, 0 %>心瓣膜</label></div>
-      <div class="col-md-2 col-xs-3"><label class="checkbox"><%= f.check_box :donate_artery, {}, 1, 0 %>血管</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_heart, {}, 1, 0 %>心臟</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_lung, {}, 1, 0 %>肺臟</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_liver, {}, 1, 0 %>肝臟</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_pancreas, {}, 1, 0 %>胰臟</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_kidney, {}, 1, 0 %>腎臟</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_smll_intestine, {}, 1, 0 %>小腸</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_cornea, {}, 1, 0 %>眼角膜</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_skin, {}, 1, 0 %>皮膚</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_skeleton, {}, 1, 0 %>骨骼</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_heart_valve, {}, 1, 0 %>心瓣膜</label></div>
+      <div class="col-md-3 col-xs-4"><label class="checkbox"><%= f.check_box :donate_artery, {}, 1, 0 %>血管</label></div>
     </div>
   </div>
   <div class="margin-bottom-20"></div>

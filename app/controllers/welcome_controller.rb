@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
 
   def index
     @byenote = Byenote.new
-    @btitle = "最後一天別讓家人煩腦"
+    @btitle = "1分鐘寫完你的生前意願"
     @stitle = "留下你的器捐意願、安寧意願、喪葬意願"
   end
 
@@ -44,7 +44,7 @@ class WelcomeController < ApplicationController
       @byenote = @user.byenote
       render :read
     else
-      redirect_to root_path
+      redirect_to :search
     end
   end
 
