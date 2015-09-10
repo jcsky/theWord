@@ -40,8 +40,8 @@ class WelcomeController < ApplicationController
 
   def read
     @user = User.find_by_page_url(params[:theword])
-    if @user
-      @byenote = @user.byenote
+    @byenote = @user.byenote
+    if @byenote
       render :read
     else
       redirect_to :search
