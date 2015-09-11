@@ -2,7 +2,8 @@
 <div class="wrapper">
   <div id="theword" class="row fill-all-form">
     <div class="col-md-8 col-md-offset-2 col-xs-12 byenote-title">
-      <h2 class="">再見手札</h2>
+      <h2 class="">修改再見手札</h2>
+      <h3>我的再見手札頁面: <%= link_to "theword.tw/read?theword=#{@user.page_url}", read_path(:theword => @user.page_url) %> </h3>
     </div>
     <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
       <%= form_for(@byenote) do |f| %>
@@ -15,7 +16,7 @@
         </div>
         <div class="margin-bottom-20"></div>
         <div class="row">
-              <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">儲存我的再見手札</button>
+              <button type="submit" class="btn btn-u" style="width:100%;padding:10px;">更新</button>
         </div>
       <% end %>
     </div>
