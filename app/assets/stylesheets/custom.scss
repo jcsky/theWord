@@ -1,18 +1,16 @@
 /* Add here all your css styles (customizations) */
 /*for index, login, signup*/
 .heading{
-  padding-top: 50px;
+  padding-top: 50px !important;
 }
-
 .organ-donation-form{
-  /*border: solid 1px #ccc;*/
   background-color: #fff;
   font-size: 16px;
   padding: 20px;
 }
 .byenote-title{
-  background-color: #FFF5D5;
-  text-align: center;
+  background-color: #FFF5D5 !important;
+  text-align: center !important;
 }
 .searchbar{
   padding: 5px;
@@ -27,7 +25,6 @@
 }
 .fill-all-form{
   margin: 30px;
-  // padding: 0px 80px;
 }
 @media (max-width: 550px){
   .fill-all-form{
@@ -53,7 +50,6 @@ textarea{
   padding: 20px;
 }
 .interactive-slider-v2{
-  // max-height: 300px;
   padding:50px 0px;
 }
 .interactive-slider-v2:after {
