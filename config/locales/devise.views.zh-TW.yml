@@ -17,7 +17,7 @@ zh-TW:
       confirmation_instructions:
         action: "確認帳號"
         greeting: "%{recipient} 你好!"
-        instruction: "您可以利用下面的連結確認您的帳戶的電子郵件:"
+        instruction: "請點擊以下連結啟用帳號"
       reset_password_instructions:
         action: "更改我的密碼"
         greeting: "你好 %{recipient}!"
@@ -37,7 +37,7 @@ zh-TW:
         new_password: "新密碼"
       new:
         forgot_your_password: "忘記密碼？"
-        send_me_reset_password_instructions: "請寄重設密碼的說明信件給我"
+        send_me_reset_password_instructions: "請寄重設密碼的Email給我"
     registrations:
       edit:
         are_you_sure: "你確定嗎？"

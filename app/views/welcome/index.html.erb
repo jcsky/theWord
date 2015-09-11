@@ -1,7 +1,7 @@
 <div class="wrapper">
   <%= render :partial => "slider", :locals => {:btitle => @btitle, :stitle => @stitle, :search_text => @search_text} %>
 
-  <div class="container content-sm">
+  <div id="theword" class="container content-sm">
       <div class="text-center margin-bottom-50">
           <h2 class="title-v2 title-center">再見手札的特色</h2>
       </div>
@@ -18,7 +18,7 @@
               <i class="pull-left fa fa-flash"></i>
               <div class="content-boxes-in-v4">
                   <h2>快速分享</h2>
-                  <p>再見手札可以快速分享您的意願，並與家人溝通。當大家都願意器捐，我們才有獲得捐贈的機會</p>
+                  <p>再見手札可以快速分享您的意願給家人，輕鬆溝通這些嚴肅的議題，也希望您能分享給親朋好友，邀請大家一起加入器官捐贈的行列!</p>
               </div>
           </div>
           <div class="col-md-4">
@@ -31,7 +31,6 @@
       </div>
   </div>
 
-
   <div id="theword" class="row fill-all-form">
     <div class="col-md-8 col-md-offset-2 col-xs-12 byenote-title">
       <h2 class="">再見手札</h2>
@@ -40,20 +39,15 @@
 
       <%= form_for(@byenote) do |f| %>
         <%= render :partial => "organ_form", :locals => {:f => f} %>
-
         <%= render :partial => "hospice_form", :locals => {:f => f} %>
-
         <%= render :partial => "funeral_form", :locals => {:f => f} %>
 
         <div class="row">
           <div class="heading"><h3 style="text-align:center;"><legend>給親友的話</legend></h3></div>
-          <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "與親朋好友們道謝、道歉、道愛、道別" %>
-        </div>
+          <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "告訴親友你寫下器官捐贈、安寧及喪葬意願的原因 (注意: 此項目開放不特定人查詢及閱覽，請避免個人隱私資訊)" %>
         <div class="margin-bottom-20"></div>
-        <div class="row">
-          <div class="col-xs-12">
-            <%= f.submit "儲存我的再見手札", :class => "btn btn-u" %>
-          </div>
+          <p>*為便於查詢，以上資料開放任何人查詢及閱覽，請避免個人隱私資訊</p>
+          <%= f.submit "儲存我的再見手札",:style => "width:100%;padding:10px;", :class => "btn btn-u" %>
         </div>
       <% end %>
     </div>
