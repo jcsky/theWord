@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     @byenote = Byenote.new
     @btitle = "1分鐘寫完你的生前意願"
-    @stitle = "留下你的器捐意願、安寧意願、喪葬意願"
+    @stitle = "親友能隨時查詢你的器捐意願、安寧意願、喪葬意願"
   end
 
   def organ

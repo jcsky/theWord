@@ -7,8 +7,6 @@
             <h2 class="title-v2">什麼是安寧療護?</h2>
             <p>安寧療護，是指經醫師判定，罹患無法治癒之疾病，且病程近期內進展至死亡已不可避免之末期病人，臨終時得選擇不接受心肺復甦術(CPR)、不施行維生醫療、接受安寧緩和醫療。</p>
             <p>在台灣，超過三成民眾在臨終前被送到醫院接受按壓、急救、插管等「死亡套餐」酷刑，他們無謂的延長死亡過程。</p><br>
-            <!-- <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-dark">Read More</a>
-            <a href="#" class="btn-u">View Our Work</a> -->
         </div>
     </div>
 </div>
@@ -129,10 +127,10 @@
     <div class="col-md-8 col-md-offset-2 col-xs-12 byenote-title">
       <h2 class="">再見手札</h2>
     </div>
-    <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2">
+    <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
         <%= form_for(@byenote) do |f| %>
           <%= render :partial => "hospice_form", :locals => {:f => f} %>
-          <%= f.submit "儲存我的安寧意願", :class => "btn btn-u" %>
+          <%= f.submit "儲存我的安寧意願",:style => "width:100%;padding:10px;", :class => "btn btn-u" %>
         <% end %>
     </div>
 </div>
