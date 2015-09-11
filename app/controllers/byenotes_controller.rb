@@ -13,8 +13,7 @@ class ByenotesController < ApplicationController
       redirect_to theword_path
     else
       session[:byenote_params] = byenote_params
-      # redirect_to new_user_registration_path
-      redirect_to new_user_session_path
+      redirect_to new_registration_path(User.new)
     end
   end
 

@@ -24,7 +24,6 @@ class User < ActiveRecord::Base
       end
       if session[:byenote_params]
         user.byenote = Byenote.new(session[:byenote_params])
-        session[:byenote_params] = nil
       end
     end
   end
@@ -32,6 +31,5 @@ class User < ActiveRecord::Base
   def set_page_url
     self.page_url = SecureRandom.urlsafe_base64()
   end
-
 
 end
