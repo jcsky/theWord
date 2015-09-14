@@ -1,4 +1,7 @@
-
+<p class="alert alert-success text-center">
+   <%= flash[:success] %>
+   <a href="" class="close" data-dismiss="alert">&#215;</a>
+</p>
 <div id="theword" class="row fill-all-form">
   <div class="col-md-8 col-md-offset-2 col-xs-12 form-page tag-box-v2 byenote-form-page">
     <%= form_for(@byenote) do |f| %>

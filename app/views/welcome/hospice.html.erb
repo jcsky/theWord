@@ -135,4 +135,13 @@
     </div>
 </div>
 
+<div class="container content-md">
+    <div class="row">
+        <div class="col-sm-8 col-sm-push-2">
+            <div class="title-v1"><h2>常見問題</h2></div>
+                <%= faq("#{Rails.root}/public/HospiceFAQ.json").html_safe %>
+        </div>
+    </div>
+</div>
+
 <%= render :partial => "contactus", :locals => { } %>

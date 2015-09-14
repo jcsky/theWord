@@ -6,8 +6,8 @@ module WelcomeHelper
   def load_json_file( filepath )
     JSON.parse( File.read(filepath) )
   end
-  def faq()
-    organfaq = load_json_file("#{Rails.root}/public/OrganFAQ.json")
+  def faq(filepath)
+    organfaq = load_json_file(filepath)
     ofaq = ""
     keycount = 0
     organfaq.each{|key,value|

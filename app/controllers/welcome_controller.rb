@@ -31,9 +31,13 @@ class WelcomeController < ApplicationController
 
   def search_post
     @user = User.find_by_email params[:search_email]
-    if @user
+    @user? @byenote = @user.byenote : @byenote = nil
+
+    if @byenote
       redirect_to read_path(:theword => @user.page_url)
+      flash[:success] = "你查詢的是 #{@user.email} 的再見手札"
     else
+      flash[:fault] = "#{params[:search_email]} 尚未填寫再見手札"
       render :search
     end
   end
