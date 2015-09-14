@@ -115,8 +115,9 @@
         <div class="row">
           <div class="heading"><h3 style="text-align:center;"><legend>給親友的話</legend></h3></div>
           <%= f.text_area :some_message, rows: 4, :class => "message_textarea", :placeholder => "告訴親友你寫下器官捐贈、安寧及喪葬意願的原因 (注意: 此項目開放不特定人查詢及閱覽，請避免個人隱私資訊)" %>
+          <p>注意: 此項目開放不特定人查詢及閱覽，請避免個人隱私資訊</p>
         <div class="margin-bottom-20"></div>
-          <p>*為便於查詢，以上資料開放任何人查詢及閱覽，請避免個人隱私資訊</p>
+          <p>*為便於查詢，以上資料皆開放任何人查詢及閱覽，請避免個人隱私資訊</p>
           <%= f.submit "儲存我的再見手札",:style => "width:100%;padding:10px;", :class => "btn btn-u" %>
         </div>
       <% end %>

@@ -15,9 +15,9 @@ class ApplicationController < ActionController::Base
                    publisher: 'https://www.facebook.com/jcsky.wang',
                    og: {
                     title: '再見手札-最簡便的器官捐贈方式',
-                    type: 'non_profit',
+                    type: 'website',
                     url: 'theword.tw',
-                    image: 'hospice.jpg',
+                    image: 'https://36.media.tumblr.com/5edc5f5d6dc61bfc61cf7a1cbc46473a/tumblr_neg9yek4Pm1srtr83o1_1280.jpg',
                     description: '快速完成器捐、安寧、喪葬意願和微遺言，親友輸入Email即可得知你的生前意願',
                     site_name: 'TheWord 再見手札'
                    },
