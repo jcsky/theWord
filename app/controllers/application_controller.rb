@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
                     type: 'website',
                     url: 'http://theword.tw',
                     image: 'https://36.media.tumblr.com/5edc5f5d6dc61bfc61cf7a1cbc46473a/tumblr_neg9yek4Pm1srtr83o1_1280.jpg',
-                    description: '快速完成器捐、安寧、喪葬意願和微遺言，親友輸入Email即可得知你的生前意願',
+                    description: '快速寫下器捐意願、安寧意願、喪葬意願和微遺言，親友輸入Email即可得知你的生前意願',
                     site_name: 'TheWord 再見手札'
                    },
                    fb: { admins: 'jcsky.wang', app_id: '836426963111446'}
