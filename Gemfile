@@ -37,6 +37,9 @@ gem 'pg'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'meta-tags'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development do
