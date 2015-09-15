@@ -26,6 +26,10 @@ Rails.application.routes.draw do
   get 'search' => 'welcome#search'
   post 'search' => 'welcome#search_post'
 
+  namespace :admin do
+    resources :byenotes
+    get 'index' => 'byenotes#index'
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
