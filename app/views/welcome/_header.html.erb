@@ -35,7 +35,9 @@
         <div class="container">
             <ul class="nav navbar-nav">
                 <% if user_signed_in? %>
-
+                    <% if current_user.admin? %>
+                        <li class="page-scroll"><%= link_to "Admin", admin_index_path %></li>
+                    <% end %>
                     <li class="page-scroll"><%= link_to '再見手札', theword_path %></li>
                     <!-- <li class="page-scroll"><%#= link_to '個人資料', profile_path %></li> -->
                     <li class="page-scroll"><%= link_to '查詢親友意願', search_path %></li>

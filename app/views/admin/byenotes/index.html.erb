@@ -1,0 +1,39 @@
+
+<div class="row">
+  <div class="col-md-10 col-md-push-1">
+    <p>you are <%= current_user.role %></p>
+    <p>Total User: <%= @users.count %></p>
+    <p>Byenote count: <%= @byenotes.count %></p>
+    <p>Donation all: <%= @byenotes.where(:donate_select => "all").count %></p>
+    <p>Facebook count: <%= @users.where(:provider => "facebook").count %></p>
+
+    <table class="table table-hover table-striped">
+      <tr>
+        <th>fullname</th>
+        <th>email</th>
+        <th>donate</th>
+        <th>funeral</th>
+        <th>some_message</th>
+        <th>updated at</th>
+        <th>sign in count</th>
+      </tr>
+      <% @users.each do |u| %>
+      <tr>
+        <td><%= u.fullname %>  <%= u.provider ? "-FB" : "-Email" %>  <%= u.confirmed_at ? 'ok' : 'no' %></td>
+        <td><%= u.email %></td>
+        <% if u.byenote %>
+          <td><%= u.byenote.donate_select %></td>
+          <td><%= u.byenote.funeral %></td>
+          <td><%= u.byenote.some_message %></td>
+        <% else %>
+          <td>none</td>
+          <td>none</td>
+          <td>none</td>
+        <% end %>
+        <td><%= u.updated_at %></td>
+        <td><%= u.sign_in_count %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

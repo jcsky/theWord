@@ -32,4 +32,8 @@ class User < ActiveRecord::Base
     self.page_url = SecureRandom.urlsafe_base64()
   end
 
+  def admin?
+    self.role == "admin"
+  end
+
 end
