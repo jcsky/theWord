@@ -19,7 +19,7 @@
       </tr>
       <% @users.each do |u| %>
       <tr>
-        <td><%= u.fullname %>  <%= u.provider ? "-FB" : "-Email" %></td>
+        <td><%= u.fullname %>  <%= u.provider ? "-FB" : "-Email" %>  <%= u.confirmed_at ? 'ok' : 'no' %></td>
         <td><%= u.email %></td>
         <% if u.byenote %>
           <td><%= u.byenote.donate_select %></td>
