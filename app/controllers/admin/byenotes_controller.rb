@@ -3,7 +3,7 @@ class Admin::ByenotesController < ApplicationController
 
   def index
     @users = User.includes(:byenote)
-
+    @byenotes = Byenote
   end
 
 
