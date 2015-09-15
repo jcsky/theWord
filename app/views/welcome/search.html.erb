@@ -15,7 +15,9 @@
         </div>
     </div>
 </div>
-<p class="alert alert-danger text-center">
-   <%= flash[:fault] %>
-   <a href="" class="close" data-dismiss="alert">&#215;</a>
-</p>
+<% if flash[:fault] %>
+  <p class="alert alert-danger text-center">
+     <%= flash[:fault] %>
+     <a href="" class="close" data-dismiss="alert">&#215;</a>
+  </p>
+<% end %>
