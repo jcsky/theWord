@@ -15,7 +15,7 @@
         <th>funeral</th>
         <th>some_message</th>
         <th>updated at</th>
-        <th>sign in count</th>
+        <th>login count</th>
       </tr>
       <% @users.each do |u| %>
       <tr>
@@ -30,7 +30,7 @@
           <td>none</td>
           <td>none</td>
         <% end %>
-        <td><%= u.updated_at %></td>
+        <td><%= u.updated_at.strftime('%y.%m.%d %H:%M ') %></td>
         <td><%= u.sign_in_count %></td>
       </tr>
       <% end %>
