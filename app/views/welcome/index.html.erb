@@ -31,7 +31,85 @@
       </div>
   </div>
 
-  <div class="bg-grey">
+  <div class="container content-md">
+    <table class="table table-hover">
+      <thead>
+        <tr><th colspan=3 class="text-center success"><h2>健保卡註記器捐、安寧意願 vs 再見手札</h2></th></tr>
+        <tr>
+          <th colspan=1 class="text-center"></th>
+          <th colspan=1 class="text-center col-xs-5"><h4>健保卡註記意願</h4></th>
+          <th colspan=1 class="text-center col-xs-5"><h4>再見手札</h4></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><h4>表達方式</h4></td>
+          <td>
+            紙本作業<br>
+            1. 下載列印<a href="file:///Users/sky/Downloads/1021029_SignCard-DM%20(1).pdf">器官捐贈同意書</a><br>
+            下載列印<a href="http://www.hospice.org.tw/2009/chinese/relax/relax-20130524-1.pdf">預立安寧緩和醫療暨維生醫療抉擇意願書</a><br>
+            2. 填寫完畢後找見證人簽名<br>
+            3. 分別寄回 器官捐贈移植登錄中心、台灣安寧照顧協會<br>
+            4. 約 30 ~ 45 天，健保卡註記完成<br>
+          </td>
+          <td>
+            <h4><u>快速</u></h4>
+            點選、註冊、一分鐘完成
+          </td>
+        </tr>
+        <tr>
+          <td><h4>查詢方式</h4></td>
+          <td>
+            1. 到醫院查詢: 持個人或親友的健保卡至醫院讀卡機查詢意願<br>
+            2. 線上查詢: 或到<a href="https://hpcod.mohw.gov.tw/HospWeb/MOPages/login.aspx">衛福部</a>網站使用健保卡、自然人憑證(需要讀卡機)查詢
+          </td>
+          <td>
+            <h4><u>方便</u></h4>
+            使用手機、電腦到 <%= link_to '再見手札查詢頁面', search_path %> <br>
+            輸入Email 查詢個人或親友的意願
+          </td>
+        </tr>
+        <tr>
+          <td><h4>修改方式</h4></td>
+          <td>
+            修改: 重新寄出器捐同意書、安寧意願書，約 30~45天，健保卡註記更新完成<br>
+            撤回: 下載列印<a href="http://www.torsc.org.tw/advocacy/advocacy_04c.jsp#">器官捐贈意願撤回聲明書</a>，填寫後寄出<br>
+          </td>
+          <td>
+            <h4><u>簡單</u></h4>
+            使用手機、電腦 <%= link_to '登入再見手札', new_user_session_path %> <br>
+            修改後儲存，立即更新完成
+          </td>
+        </tr>
+        <tr>
+          <td><h4>法律效力 與 現實</h4></td>
+          <td>有法律效力，但醫師以家屬意願為主<br>
+            即使是預立遺囑或已於健保卡註記，一旦有家屬不同意捐贈，醫院將以家屬意願為主
+          </td>
+          <td>
+            <h4><u>效果相同</u></h4>
+            無法律效力，但醫師以家屬意願為主<br>
+            <u>因此請將您的再見手札分享給家屬</u><br>
+          </td>
+        </tr>
+        <tr><td colspan=3 class="text-center"><a href="#theword" class="btn btn-default"><h3>開始填寫「再見手札」</h3></a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="founder-talk">
+    <div class="parallax-quote-in">
+        <p>
+          再見手札 與 健保卡註記，實際效益是相同的
+          <strong>因為最終決定權在家屬手上</strong><br>
+          <span class="color-green">因此務必將你的意願分享給家屬、親友知悉</span><br>
+          再見手札為了讓您方便建立、分享、查詢意願而生
+        </p>
+        <small>- 再見手札創辦人 Sky -</small>
+    </div>
+</div>
+
+  <div class="">
     <div class="container content-md">
         <div class="row">
             <div class="col-md-6">
@@ -43,14 +121,14 @@
                 <div class="margin-bottom-30">
                     <i class="icon-custom icon-md rounded-x icon-bg-u fa fa-lightbulb-o"></i>
                     <div class="content-boxes-in-v3">
-                        <h2 class="heading-sm">給家人永遠的照顧</h2>
+                        <h2 class="heading-sm">使家人有器官移植優先權</h2>
                         <p>捐贈者三親等內家屬等候器官移植時將有優先權</p>
                     </div>
                 </div>
                 <div class="margin-bottom-30">
                     <i class="icon-custom icon-md rounded-x icon-bg-u fa fa-lightbulb-o"></i>
                     <div class="content-boxes-in-v3">
-                        <h2 class="heading-sm">幫助他人獲得重⽣</h2>
+                        <h2 class="heading-sm">翻轉20個人的命運</h2>
                         <p>如果您捐出5個器官，可以幫助5個家庭 ，大約可以改變20個人的人生</p>
                     </div>
                 </div>
@@ -66,7 +144,7 @@
     </div>
   </div>
   <legend></legend>
-  <div class="container content-md">
+  <div class="container content-md bg-grey">
       <div class="row">
           <div class="col-md-6">
               <h2 class="title-v2">什麼是安寧療護?</h2>
@@ -77,7 +155,7 @@
               <div class="margin-bottom-30">
                   <i class="icon-custom icon-md rounded-x icon-bg-u fa fa-lightbulb-o"></i>
                   <div class="content-boxes-in-v3">
-                      <h2 class="heading-sm">避免無效醫療，減少末期痛苦</h2>
+                      <h2 class="heading-sm">讓生命末期不受醫療折磨</h2>
                       <p>臨終前使用加護病房的人中，有52.9%的人遭遇無效醫療的折磨無法善終</p>
                   </div>
               </div>
