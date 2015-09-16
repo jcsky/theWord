@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.fullname = auth.info.name   # assuming the user model has a name
       user.image = auth.info.image # assuming the user model has an image
+      user.confirmed_at = Time.now
     end
   end
 
@@ -25,7 +26,6 @@ class User < ActiveRecord::Base
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
         user.email = data["email"] if user.email.blank?
       end
-
     end
   end
 
