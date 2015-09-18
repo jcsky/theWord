@@ -2,7 +2,7 @@
 <div class="header header-sticky">
     <div class="container">
         <!-- Logo -->
-        <%= link_to "theWord - 再見手札", root_path, :class => "navbar-brand", :style => 'padding:40px;font-size:30px;color:#72c02c;' %>
+        <%= link_to "再見手札 theWord", root_path, :class => "navbar-brand", :style => 'padding:40px 0px;font-size:30px;color:#72c02c;' %>
         <!-- End Logo -->
 
         <!-- Topbar -->
@@ -14,8 +14,8 @@
                       <%= link_to "登出", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
                     <% else %>
                       <%= link_to "註冊", new_user_registration_path, :class => 'navbar-link'  %> |
-                      <%= link_to "登入", new_user_session_path, :class => 'navbar-link'  %> |
-                      <%= link_to "Facebook登入", user_omniauth_authorize_path(:facebook) %>
+                      <%= link_to "登入", new_user_session_path, :class => 'navbar-link'  %>
+                      <%#= link_to "Facebook 登入", user_omniauth_authorize_path(:facebook) %>
                     <% end %>
                 </li>
             </ul>
